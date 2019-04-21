@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="info" class="com.suraj.spring.beans.HCLInfo">
+		<property name="nameSet">
+			<set>
+				<value>Suraj</value>
+				<value>Namrata</value>
+				<value>Ayush</value>
+				<value>Suraj</value>
+			</set>
+		</property>
+		<property name="empSet">
+			<set>
+				<ref bean="employee1" />
+				<ref bean="employee2" />
+				<ref bean="employee1" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="employee1" class="com.suraj.spring.beans.Employee">
+		<property name="id" value="51697595" />
+		<property name="name" value="Suraj Singh" />
+		<property name="orgName" value="HCL Technologies" />
+	</bean>
+
+	<bean id="employee2" class="com.suraj.spring.beans.Employee">
+		<property name="id" value="51697590" />
+		<property name="name" value="Ram Mohan" />
+		<property name="orgName" value="HCL Technologies" />
+	</bean>
+</beans>
